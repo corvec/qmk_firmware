@@ -84,6 +84,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 /*Dual function with Shift*/
 // #define KC_SESC SFT_T(KC_ESC)
+// Used only if shift lock is enabled. Shift on hold, caps lock on tap.
+#define KC_SFCL SFT_T(KC_CAPSLOCK)
 
 /*Dual function with Alt*/
 // #define KC_AENT ALT_T(KC_ENT)
@@ -118,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef SHIFT_LOCK_TIMEOUT
      TLSC, Z  , X  , C  , V  , B  ,LGUI,     BSPC, K  , M  ,COMM,DOT ,SLSH,MSFT,
 #else
-     TLSC, Z  , X  , C  , V  , B  ,LGUI,     BSPC, K  , M  ,COMM,DOT ,SLSH,RSFT,
+     TLSC, Z  , X  , C  , V  , B  ,LGUI,     BSPC, K  , M  ,COMM,DOT ,SLSH,SFCL,
 #endif
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
                        LALT,LENT,CENT,         RSPC,SPC ,TALS
